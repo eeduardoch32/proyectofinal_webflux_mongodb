@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "CUR001",
+    "codigo": "CS101",
+    "nombre": "Programacion I",
+    "creditos": 4,
+    "docente": {
+      "codigo": "DOC001",
+      "nombres": "Carlos",
+      "apellidos": "Ramos"
+    },
+    "estado": "A"
+  },
+  {
+    "_id": "CUR002",
+    "codigo": "CS102",
+    "nombre": "Base de Datos",
+    "creditos": 4,
+    "docente": {
+      "codigo": "DOC002",
+      "nombres": "Luis",
+      "apellidos": "Torres"
+    },
+    "estado": "A"
+  },
+  {
+    "_id": "CUR003",
+    "codigo": "CS103",
+    "nombre": "Arquitectura de Software",
+    "creditos": 3,
+    "docente": {
+      "codigo": "DOC001",
+      "nombres": "Carlos",
+      "apellidos": "Ramos"
+    },
+    "estado": "A"
+  },
+  {
+    "_id": "CUR004",
+    "codigo": "CS104",
+    "nombre": "Desarrollo Web",
+    "creditos": 4,
+    "docente": {
+      "codigo": "DOC002",
+      "nombres": "Luis",
+      "apellidos": "Torres"
+    },
+    "estado": "A"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "DOC001",
+    "codigo": "DOC001",
+    "nombres": "Carlos",
+    "apellidos": "Ramos",
+    "estado": "A"
+  },
+  {
+    "_id": "DOC002",
+    "codigo": "DOC002",
+    "nombres": "Luis",
+    "apellidos": "Torres",
+    "estado": "A"
+  }
+]

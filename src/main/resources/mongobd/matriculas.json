@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "MAT001",
+    "codigoMatricula": "MAT001",
+    "alumno": {
+      "codigo": "20250001",
+      "nombres": "Juan",
+      "apellidos": "Perez"
+    },
+    "periodo": {
+      "codigo": "2026-II",
+      "descripcion": "Periodo Academico 2026-II"
+    },
+    "cursos": [
+      {
+        "codigo": "CS101",
+        "nombre": "Programacion I",
+        "creditos": 4
+      },
+      {
+        "codigo": "CS102",
+        "nombre": "Base de Datos",
+        "creditos": 4
+      },
+      {
+        "codigo": "CS103",
+        "nombre": "Arquitectura de Software",
+        "creditos": 3
+      }
+    ],
+    "totalCreditos": 11,
+    "pago": {
+      "numeroOperacion": "OP123456",
+      "monto": 550.0,
+      "voucher": {
+        "nombreArchivo": "voucher-MAT001.jpg",
+        "url": "/uploads/voucher-MAT001.jpg"
+      },
+      "estado": "PAGADO"
+    },
+    "estado": "REGISTRADO"
+  },
+  {
+    "_id": "MAT002",
+    "codigoMatricula": "MAT002",
+    "alumno": {
+      "codigo": "20250002",
+      "nombres": "Maria",
+      "apellidos": "Lopez"
+    },
+    "periodo": {
+      "codigo": "2026-II",
+      "descripcion": "Periodo Academico 2026-II"
+    },
+    "cursos": [
+      {
+        "codigo": "CS101",
+        "nombre": "Programacion I",
+        "creditos": 4
+      },
+      {
+        "codigo": "CS104",
+        "nombre": "Desarrollo Web",
+        "creditos": 4
+      }
+    ],
+    "totalCreditos": 8,
+    "pago": {
+      "numeroOperacion": "OP123457",
+      "monto": 400.0,
+      "voucher": {
+        "nombreArchivo": "voucher-MAT002.jpg",
+        "url": "/uploads/voucher-MAT002.jpg"
+      },
+      "estado": "PAGADO"
+    },
+    "estado": "REGISTRADO"
+  }
+]

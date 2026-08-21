@@ -1,0 +1,18 @@
+[{
+
+  "usuario": "rchavez",
+  "clave": "$2a$08$SXr4v35kaFk7XBufsBBSTuOH/1vIzpOnf7yiZuhXg3AvU9GdSpPpO",
+  "roles": [
+    "admin",
+    "user"
+  ],
+  "estado": "1"
+},{
+
+  "usuario": "jperez",
+  "clave": "$2a$08$SXr4v35kaFk7XBufsBBSTuOH/1vIzpOnf7yiZuhXg3AvU9GdSpPpO",
+  "roles": [
+    "user"
+  ],
+  "estado": "1"
+}]

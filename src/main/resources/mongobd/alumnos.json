@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "ALU001",
+    "codigo": "20250001",
+    "nombres": "Juan",
+    "apellidos": "Perez",
+    "email": "juan@gmail.com",
+    "estado": "A"
+  },
+  {
+    "_id": "ALU002",
+    "codigo": "20250002",
+    "nombres": "Maria",
+    "apellidos": "Lopez",
+    "email": "maria@gmail.com",
+    "estado": "A"
+  },
+  {
+    "_id": "ALU003",
+    "codigo": "20250003",
+    "nombres": "Pedro",
+    "apellidos": "Ramirez",
+    "email": "pedro@gmail.com",
+    "estado": "A"
+  }
+]
