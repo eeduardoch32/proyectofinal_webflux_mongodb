@@ -50,6 +50,7 @@ public class MatriculaServiceV1Impl implements MatriculaServiceV1 {
                     // Aquí puedes actualizar los campos
                     actual.setCodigoMatricula(matricula.getCodigoMatricula());
                     actual.setEstado(matricula.getEstado());
+                    actual.setFechaMatricula(matricula.getFechaMatricula());
 
                     return matriculaRepository.save(actual);
                 });

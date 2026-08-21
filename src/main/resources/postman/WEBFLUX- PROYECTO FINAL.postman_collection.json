@@ -1,0 +1,471 @@
+{
+  "info": {
+    "_postman_id": "6af4826b-e11f-4b0e-b1b4-f9c5df86ca26",
+    "name": "WEBFLUX- PROYECTO FINAL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27356552"
+  },
+  "item": [
+    {
+      "name": "API REST v1 –Controller",
+      "item": [
+        {
+          "name": "lista matriculas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v1/matriculas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v1",
+                "matriculas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar Por Id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v1/matriculas/a9706207-b508-4c87-8dbf-fb3bed580b97",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v1",
+                "matriculas",
+                "a9706207-b508-4c87-8dbf-fb3bed580b97"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Matricula",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigoMatricula\": \"MAT001\",\r\n  \"alumno\": {\r\n    \"codigo\": \"ALU003\",\r\n    \"nombres\": \"Carlos\",\r\n    \"apellidos\": \"Ramirez\"\r\n  },\r\n   \"cursos\": [\r\n            {\r\n                \"codigo\": \"CS101\",\r\n                \"nombre\": \"Programacion I\",\r\n                \"creditos\": 4\r\n            },\r\n            {\r\n                \"codigo\": \"CS104\",\r\n                \"nombre\": \"Desarrollo Web\",\r\n                \"creditos\": 4\r\n            }\r\n        ],\r\n        \"pago\": {\r\n            \"numeroOperacion\": \"OP123457\",\r\n            \"monto\": 400.0,\r\n            \"voucher\": \"{\\\"nombreArchivo\\\": \\\"voucher-MAT002.jpg\\\", \\\"url\\\": \\\"/uploads/voucher-MAT002.jpg\\\"}\"\r\n        },\r\n       \r\n  \"fechaMatricula\": \"2026-08-20T08:30:10.000Z\",\r\n  \"estado\": \"REGISTRADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/v1/matriculas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v1",
+                "matriculas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Editar Matricula",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigoMatricula\": \"MAT001\",\r\n  \"alumno\": {\r\n    \"codigo\": \"ALU003\",\r\n    \"nombres\": \"Carlos\",\r\n    \"apellidos\": \"Ramirez\"\r\n  },\r\n   \"cursos\": [\r\n            {\r\n                \"codigo\": \"CS101\",\r\n                \"nombre\": \"Programacion I\",\r\n                \"creditos\": 4\r\n            },\r\n            {\r\n                \"codigo\": \"CS104\",\r\n                \"nombre\": \"Desarrollo Web\",\r\n                \"creditos\": 4\r\n            }\r\n        ],\r\n        \"pago\": {\r\n            \"numeroOperacion\": \"OP123457\",\r\n            \"monto\": 400.0,\r\n            \"voucher\": \"{\\\"nombreArchivo\\\": \\\"voucher-MAT002.jpg\\\", \\\"url\\\": \\\"/uploads/voucher-MAT002.jpg\\\"}\"\r\n        },\r\n       \r\n  \"fechaMatricula\": \"2026-02-28T18:30:10.000Z\",\r\n  \"estado\": \"REGISTRADO0\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/v1/matriculas/a9706207-b508-4c87-8dbf-fb3bed580b97",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v1",
+                "matriculas",
+                "a9706207-b508-4c87-8dbf-fb3bed580b97"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Matricula",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v1/matriculas/f9094d48-9518-40c0-b3b0-0503ebf5be91",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v1",
+                "matriculas",
+                "f9094d48-9518-40c0-b3b0-0503ebf5be91"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API REST v2 –Functional Endpoint",
+      "item": [
+        {
+          "name": "Listar Matriculas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v2/matriculas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v2",
+                "matriculas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v2/matriculas/4ed5b468-e1ff-42e9-ae24-1018a34a7dce",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v2",
+                "matriculas",
+                "4ed5b468-e1ff-42e9-ae24-1018a34a7dce"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Matricula",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigoMatricula\": \"MAT002\",\r\n  \"alumno\": {\r\n    \"codigo\": \"ALU001\",\r\n    \"nombres\": \"Juan\",\r\n    \"apellidos\": \"Perez\"\r\n  },\r\n   \"cursos\": [\r\n            {\r\n                \"codigo\": \"CS101\",\r\n                \"nombre\": \"Programacion I\",\r\n                \"creditos\": 4\r\n            },\r\n            {\r\n                \"codigo\": \"CS104\",\r\n                \"nombre\": \"Desarrollo Web\",\r\n                \"creditos\": 4\r\n            }\r\n        ],\r\n        \"pago\": {\r\n            \"numeroOperacion\": \"OP123457\",\r\n            \"monto\": 400.0,\r\n            \"voucher\": \"{\\\"nombreArchivo\\\": \\\"voucher-MAT002.jpg\\\", \\\"url\\\": \\\"/uploads/voucher-MAT002.jpg\\\"}\"\r\n        },\r\n       \r\n  \"fechaMatricula\": \"2026-08-25T08:30:17.000Z\",\r\n  \"estado\": \"REGISTRADO\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/v2/matriculas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v2",
+                "matriculas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Editar Matricula",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codigoMatricula\": \"MAT001\",\r\n  \"alumno\": {\r\n    \"codigo\": \"ALU003\",\r\n    \"nombres\": \"Carlos\",\r\n    \"apellidos\": \"Ramirez\"\r\n  },\r\n   \"cursos\": [\r\n            {\r\n                \"codigo\": \"CS101\",\r\n                \"nombre\": \"Programacion I\",\r\n                \"creditos\": 4\r\n            },\r\n            {\r\n                \"codigo\": \"CS104\",\r\n                \"nombre\": \"Desarrollo Web\",\r\n                \"creditos\": 4\r\n            }\r\n        ],\r\n        \"pago\": {\r\n            \"numeroOperacion\": \"OP123457\",\r\n            \"monto\": 400.0,\r\n            \"voucher\": \"{\\\"nombreArchivo\\\": \\\"voucher-MAT002.jpg\\\", \\\"url\\\": \\\"/uploads/voucher-MAT002.jpg\\\"}\"\r\n        },\r\n       \r\n  \"fechaMatricula\": \"2026-08-20T08:31:10.000Z\",\r\n  \"estado\": \"REGISTRADO80\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/api/v2/matriculas/a9706207-b508-4c87-8dbf-fb3bed580b97",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v2",
+                "matriculas",
+                "a9706207-b508-4c87-8dbf-fb3bed580b97"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Matricula",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v2/matriculas/7e2729af-d10d-4c27-a745-710368d905de",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v2",
+                "matriculas",
+                "7e2729af-d10d-4c27-a745-710368d905de"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API REST v3 –Functional Endpoint",
+      "item": [
+        {
+          "name": "Listar Matriculas",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v3/matriculas",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v3",
+                "matriculas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por Id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ7XCJpZFwiOlwiNmE4NzM0ZjA3ODEyMWJlNDQ3OTZiM2NmXCIsXCJ1c3VhcmlvXCI6XCJyY2hhdmV6XCJ9IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn0seyJhdXRob3JpdHkiOiJVU0VSIn1dLCJpYXQiOjE3ODcyNDU4MTIsImV4cCI6MTc4NzMzMjIxMn0.SvBwnig6sjT9Z-Fo-Zyfzw42z3kPUvVPbt_VG4v2Rx3pr7P22QRGOg2hd2NpBOhr",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8082/api/v3/matriculas/4ed5b468-e1ff-42e9-ae24-1018a34a7dce",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "api",
+                "v3",
+                "matriculas",
+                "4ed5b468-e1ff-42e9-ae24-1018a34a7dce"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\": \"rchavez\",\r\n    \"clave\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/v1/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

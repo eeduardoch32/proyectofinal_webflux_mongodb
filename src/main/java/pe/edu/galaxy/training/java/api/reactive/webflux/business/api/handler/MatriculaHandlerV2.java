@@ -1,12 +1,16 @@
 package pe.edu.galaxy.training.java.api.reactive.webflux.business.api.handler;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import org.springframework.web.server.ResponseStatusException;
 import pe.edu.galaxy.training.java.api.reactive.webflux.business.document.MatriculaDocument;
 import pe.edu.galaxy.training.java.api.reactive.webflux.business.service.MatriculaServiceV2;
 import reactor.core.publisher.Mono;
+
+import java.util.Map;
 
 import static org.springframework.web.reactive.function.server.ServerResponse.*;
 
@@ -106,9 +110,22 @@ public class MatriculaHandlerV2 {
     public Mono<ServerResponse> delete(ServerRequest request) {
 
         String id = request.pathVariable("id");
-
-        return matriculaService
-                .delete(id)
-                .then(ok().build());
+        return matriculaService.findById(id)
+                .switchIfEmpty(Mono.error(
+                        new ResponseStatusException(
+                                HttpStatus.NOT_FOUND,
+                                "Matrícula no encontrada"
+                        )
+                ))
+                .flatMap(matricula -> matriculaService.delete(id))
+                .then(
+                        ServerResponse.ok()
+                                .bodyValue(
+                                        Map.of(
+                                                "mensaje", "Matrícula eliminada correctamente",
+                                                "id", id
+                                        )
+                                )
+                );
     }
 }

@@ -1,6 +1,7 @@
 package pe.edu.galaxy.training.java.api.reactive.webflux.business.document;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
@@ -32,6 +33,8 @@ public class MatriculaDocument implements Serializable{
     private Pago pago;
 
     private String estado;
+
+    private Instant fechaMatricula;
 
     @Data
     @NoArgsConstructor

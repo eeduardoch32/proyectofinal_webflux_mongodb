@@ -1,7 +1,9 @@
 package pe.edu.galaxy.training.java.api.reactive.webflux.business.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 import pe.edu.galaxy.training.java.api.reactive.webflux.business.document.MatriculaDocument;
 import pe.edu.galaxy.training.java.api.reactive.webflux.business.mappers.MatriculaMapper;
 import pe.edu.galaxy.training.java.api.reactive.webflux.business.repository.MatriculaRepository;
@@ -42,9 +44,14 @@ public class MatriculaServiceV2Impl implements MatriculaServiceV2 {
 
     @Override
     public Mono<MatriculaDocument> update(MatriculaDocument matricula) {
-
         return matriculaRepository
                 .findById(matricula.getId())
+                .switchIfEmpty(Mono.error(
+                        new ResponseStatusException(
+                                HttpStatus.NOT_FOUND,
+                                "Matrícula no encontrada"
+                        )
+                ))
                 .flatMap(actual -> {
 
                     actual.setCodigoMatricula(
@@ -53,6 +60,10 @@ public class MatriculaServiceV2Impl implements MatriculaServiceV2 {
 
                     actual.setEstado(
                             matricula.getEstado()
+                    );
+
+                    actual.setFechaMatricula(
+                            matricula.getFechaMatricula()
                     );
 
                     return matriculaRepository.save(actual);

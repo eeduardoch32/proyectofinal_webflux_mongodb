@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 
@@ -31,6 +32,7 @@ public class MatriculaDto implements Serializable {
 
     private String estado;
 
+    private Instant fechaMatricula;
 
     @Data
     @AllArgsConstructor

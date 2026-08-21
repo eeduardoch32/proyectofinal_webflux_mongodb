@@ -27,6 +27,7 @@ public class JwtAuthenticationManager implements ReactiveAuthenticationManager {
     public Mono<Authentication> authenticate(
             Authentication authentication) {
 
+        /*
         System.out.println("ENTRO AUTH MANAGER");
         System.out.println("TOKEN: " + authentication.getCredentials());
 
@@ -34,6 +35,8 @@ public class JwtAuthenticationManager implements ReactiveAuthenticationManager {
         System.out.println("TOKEN RECIBIDO:");
         System.out.println(authentication.getCredentials());
         System.out.println("=================");
+
+         */
 
         return Mono.just(authentication)
 

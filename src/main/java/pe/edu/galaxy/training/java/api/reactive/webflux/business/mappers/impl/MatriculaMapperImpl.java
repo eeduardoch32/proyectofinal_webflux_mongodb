@@ -71,6 +71,8 @@ public class MatriculaMapperImpl implements MatriculaMapper {
 				pago.setVoucher(pagoDocument.getVoucher());
 				matriculaDto.setPago(pago);
 				matriculaDto.setEstado(matriculaDocument.getEstado());
+				matriculaDto.setFechaMatricula(matriculaDocument.getFechaMatricula());
+
 
 
 
@@ -124,6 +126,7 @@ public class MatriculaMapperImpl implements MatriculaMapper {
 				matriculaDocument.setId(tallerDto.getId());
 				matriculaDocument.setCodigoMatricula(tallerDto.getCodigoMatricula());
 				matriculaDocument.setEstado(tallerDto.getEstado());
+				matriculaDocument.setFechaMatricula(tallerDto.getFechaMatricula());
 
 				MatriculaDocument.Alumno alumno  = new MatriculaDocument.Alumno(alumnoDto.getCodigo(),
 						alumnoDto.getNombres(),alumnoDto.getApellidos());
@@ -165,14 +168,14 @@ public class MatriculaMapperImpl implements MatriculaMapper {
 	}
 
 	@Override
-	public Flux<MatriculaDto> toFluxDto(Flux<MatriculaDocument> fluxTallerDocument) {
-		return fluxTallerDocument.map(this::toDto);
+	public Flux<MatriculaDto> toFluxDto(Flux<MatriculaDocument> fluxMatriculaDocument) {
+		return fluxMatriculaDocument.map(this::toDto);
 	}
 
 
 	@Override
-	public Mono<MatriculaDto> toMonoDto(MatriculaDocument tallerDocument) {
-		return Mono.just(tallerDocument).map(this::toDto);
+	public Mono<MatriculaDto> toMonoDto(MatriculaDocument matriculaDocument) {
+		return Mono.just(matriculaDocument).map(this::toDto);
 	}
 
 	@Override
@@ -182,6 +185,7 @@ public class MatriculaMapperImpl implements MatriculaMapper {
 		target.setCursos(source.getCursos());
 		target.setPago(source.getPago());
 		target.setEstado(source.getEstado());
+		target.setFechaMatricula(source.getFechaMatricula());
 	}
 
 	@Override
@@ -190,6 +194,7 @@ public class MatriculaMapperImpl implements MatriculaMapper {
 		target.setAlumno(this.toDto(source.getAlumno()));
 		target.setPago(this.toDto(source.getPago()));
 		target.setEstado(source.getEstado());
+		target.setFechaMatricula(source.getFechaMatricula());
 	}
 
 	@Override

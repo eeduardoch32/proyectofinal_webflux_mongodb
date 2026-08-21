@@ -48,16 +48,7 @@ public class JwtFilter implements WebFilter {
 				|| path.equals("/api/v1/auth")) {
 			return chain.filter(exchange);
 		}
-/*
-		if (path.startsWith("/api/v1/matriculas/public/")) {
-			return chain.filter(exchange);
-		}
 
-		if (path.startsWith("/api/v2/matriculas/public/")) {
-			return chain.filter(exchange);
-		}
-
- */
 
 		// Swagger UI
 		if (path.equals("/swagger-ui.html")
